@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="sidebar">
+      <button (click)="navigateToChampionships()">Lista de campeonatos</button>
+      <button (click)="navigateToMatches()">Lista de Matches</button>
+    </div>
+    <div class="teams-box">
+      <h1 class="title">Lista de Times</h1>
+      <div class="teams-container" *ngIf="teams.length > 0">
+          <div class="team-card" *ngFor="let team of teams">
+        {{ teams | json }}
+      <h2>{{ team.name }}</h2>
+      <p>ID: {{ team.id }}</p>
+      <p>Championship ID: {{ team.championship_id }}</p>
+      <p>Created At: {{ team.created_at }}</p>
+      <p>Updated At: {{ team.updated_at }}</p>
+    </div>
+  </div>
+    
+      <div *ngIf="teams.length === 0">
+        <p>Nenhum time encontrado.</p>
+      </div>
+    </div>
+  </div>

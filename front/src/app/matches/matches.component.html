@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="sidebar">
+      <button (click)="navigateToChampionships()">Lista de campeonatos</button>
+      <button (click)="navigateToTeams()">Lista de times</button>
+      <button (click)="openCreateChampionshipForm()">Criar Campeonato</button>
+    </div>
+    
+    <div class="match-box">
+        <h1 class="title">Lista de matches</h1>
+        <div class="match-container" *ngIf="matches.length > 0" style="overflow-y: auto; max-height: 200px;">
+          <div class="match-card" *ngFor="let match of matches">
+            <h2>{{ match.name }}</h2>
+            <ul>
+              <li *ngFor="let match of matches">
+                Round {{ match.round }}
+                <span>Time 1: {{ match.team1 }} ({{ match.score1 }})</span>
+                <span>Time 2: {{ match.team2 }} ({{ match.score2 }})</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+      <div *ngIf="matches.length === 0">
+        <p>Nenhum time encontrado.</p>
+      </div>
+    </div>

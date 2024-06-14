@@ -1,0 +1,57 @@
+.championship-form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.championship-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.championship-form input[type="text"] {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.championship-form input[type="text"]:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.championship-form .team-inputs {
+  margin-top: 20px;
+}
+
+.championship-form .team-inputs label {
+  display: inline-block;
+  width: 40px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.championship-form .team-inputs input[type="text"] {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.championship-form button[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.championship-form button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
